@@ -110,7 +110,7 @@ year-in-pixels/
 ├─ package.json
 ├─ vite.config.js
 └─ README.md
-
+```
 ## Environment Variables
 
 Create a `.env` file in the project root (same level as `package.json`):
@@ -118,7 +118,7 @@ Create a `.env` file in the project root (same level as `package.json`):
 ```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-
+```
 ## Getting Started
 1) Clone
 git clone https://github.com/<your-username>/year-in-pixels.git
