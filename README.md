@@ -1,4 +1,4 @@
-# Year in Pixels 📅🎨
+# Progress Tracker
 
 A modern **year-long activity & productivity tracker** inspired by the *Year in Pixels* concept.  
 Built with **React + Vite**, backed by **Supabase**, and designed to help you **visualize habits, streaks, and progress** across an entire year.
@@ -28,7 +28,7 @@ Track daily activities, maintain streaks, analyze weekly productivity, and expor
 - Persists across logout / login
 
 ### Analytics
-- 📊 **Weekly Progress Chart**
+-  **Weekly Progress Chart**
   - X-axis: Date
   - Y-axis: Productivity %
   - Smooth, wavy line graph
@@ -118,7 +118,8 @@ Create a `.env` file in the project root (same level as `package.json`):
 ```env
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-Getting Started
+
+## Getting Started
 1) Clone
 git clone https://github.com/<your-username>/year-in-pixels.git
 cd year-in-pixels
@@ -137,43 +138,29 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 
 
-Open in browser:
+## Open in browser:
 
 http://localhost:5173
 
-Build for Production
+## Build for Production
 npm run build
 npm run preview
 
-How It Works (High Level)
-Data Flow
+## How It Works (High Level)
+1.  Data Flow
+- User authenticates via Supabase Auth
+- App loads yearly data using user.id
+- All daily activity data is stored as a single yearly JSON
+- Changes auto-save using upsert
+- A unique (user_id, year) constraint prevents duplicate rows and data loss
 
-User authenticates via Supabase Auth
-
-App loads yearly data using user.id
-
-All daily activity data is stored as a single yearly JSON
-
-Changes auto-save using upsert
-
-A unique (user_id, year) constraint prevents duplicate rows and data loss
-
-Streak Logic
-
-Iterates days in chronological order
-
-Streak breaks on a missed day
-
-Automatically calculates:
-
-Current streak
-
-Best streak
-
-Weekly Chart
-
-Calculates daily productivity percentage
-
-Groups data by week
-
-Renders a smooth, wavy line chart using Recharts
+2. Streak Logic
+- Iterates days in chronological order
+- Streak breaks on a missed day
+- Automatically calculates:
+  Current streak
+  Best streak
+  Weekly Chart
+- Calculates daily productivity percentage
+- Groups data by week
+- Renders a smooth, wavy line chart using Recharts
