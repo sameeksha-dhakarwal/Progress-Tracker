@@ -1,5 +1,5 @@
 # Progress Tracker
-
+Live link : https://progress-tracker-712.netlify.app/
 A modern **year-long activity & productivity tracker** inspired by the *Year in Pixels* concept.  
 Built with **React + Vite**, backed by **Supabase**, and designed to help you **visualize habits, streaks, and progress** across an entire year.
 
